@@ -1,0 +1,11 @@
+.booking-section {
+	height: 90vh;
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-dark,
+		$color-primary-light
+	);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

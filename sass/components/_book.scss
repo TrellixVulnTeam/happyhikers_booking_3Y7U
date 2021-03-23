@@ -1,0 +1,82 @@
+.book {
+	font-family: "Poppins", sans-serif;
+	width: 80%;
+	background-image: linear-gradient(
+			105deg,
+			rgba($color-white, 0.7) 0%,
+			rgba($color-white, 0.7) 50%,
+			transparent 50%
+		),
+		url(/img/section_img.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 65rem;
+	box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
+	border-radius: 0.5rem;
+
+	&__heading {
+		margin: 0 auto 4rem;
+		display: inline-block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		letter-spacing: 0.3rem;
+		color: $color-primary-dark;
+		transition: all 0.3s;
+		text-transform: uppercase;
+
+		&:hover {
+			transform: scale(1.2) skewX(-15deg);
+		}
+	}
+
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
+}
+
+.form {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	&__input {
+		font-family: inherit;
+		border: none;
+		padding: 1rem;
+		transition: all 0.2s;
+		display: inline-block;
+		width: 85%;
+		border-bottom: 3px solid transparent;
+		border-radius: 0.5rem;
+
+		&::-webkit-input-placeholder {
+			color: $color-gray;
+		}
+
+		&:focus {
+			box-shadow: 0 1rem 1rem rgba($color-black, 0.1);
+			outline: none;
+			border-bottom: 3px solid $color-primary-dark;
+		}
+
+		&:focus:invalid {
+			border-bottom: 3px solid $color-secondary;
+		}
+	}
+
+	&__label {
+		color: $color-gray;
+		display: inline-block;
+		font-weight: 700;
+		margin-top: 0.5rem;
+		margin-left: 1rem;
+		transition: all 0.3s;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-3.5rem);
+	}
+}

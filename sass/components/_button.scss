@@ -1,0 +1,23 @@
+.btn {
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 2rem;
+	background-color: $color-primary-dark;
+	color: $color-white;
+	padding: 1rem 2rem;
+	border-radius: 3rem;
+	transition: all 0.3s;
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-0.1rem);
+		box-shadow: 0 1rem 1rem rgba($color-black, 0.5);
+	}
+
+	&:hover {
+		transform: translateY(-0.3rem);
+		box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+	}
+}
